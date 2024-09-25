@@ -1,7 +1,9 @@
-package week1;
+package com.yurkin;
 
-public class data_values {
-    public static void main(String[] args) {
+public class App 
+{
+    public static void main( String[] args )
+    {
         // Для целых чисел:
         // byte занимает 8 бит и может хранить значения от -128 до 127 (2^7 = 128)
         System.out.println("Byte: ");

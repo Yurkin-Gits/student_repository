@@ -1,8 +1,11 @@
-package week1;
+package com.yurkin;
+
 import java.util.Scanner;
 
-public class dodecahedron {
-    public static void main(String[] args) {
+public class App 
+{
+    public static void main( String[] args )
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите длину ребра: ");
         Double edge = scanner.nextDouble();
