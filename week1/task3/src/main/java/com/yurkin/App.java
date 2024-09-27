@@ -8,10 +8,16 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите длину ребра: ");
-        Double edge = scanner.nextDouble();
+        int edge = scanner.nextInt();
         scanner.close();
-        Double c = (15+7*Math.sqrt(5))/4;
+        double value = getValue(edge);
         System.out.print("Объём додекаэдра равен: ");
-        System.out.printf("%.1f", Math.pow(edge, 3)*c);
+        System.out.printf("%.1f", value);
+    }
+
+    public static double  getValue(int edge)
+    {
+        double V = ((15+7*Math.sqrt(5))/4) * Math.pow(edge, 3);
+        return V;
     }
 }
