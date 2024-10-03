@@ -2,7 +2,7 @@ package com.yurkin;
 
 import java.util.Scanner;
 
-public class App 
+public class Main 
 {
     public static void main( String[] args )
     {
@@ -12,7 +12,7 @@ public class App
         scanner.close();
         double value = getValue(edge);
         System.out.print("Объём додекаэдра равен: ");
-        System.out.printf("%.1f", value);
+        System.out.printf("%.1f%n", value);
     }
 
     public static double  getValue(int edge)
