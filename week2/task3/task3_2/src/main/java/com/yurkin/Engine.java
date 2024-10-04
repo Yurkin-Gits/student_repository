@@ -7,7 +7,6 @@ class Engine {
     }
 
     public int getPower() {
-        // Метод для получения мощности двигателя
         return power;
     }
 }

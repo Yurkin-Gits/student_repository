@@ -1,6 +1,5 @@
 package com.yurkin;
 
-// Класс Passenger, представляющий пассажира автомобиля
 class Passenger {
     private final String name;
 
@@ -9,7 +8,6 @@ class Passenger {
     }
 
     public String getName() {
-    // Метод для получения имени пассажира
         return name;
     }
 }

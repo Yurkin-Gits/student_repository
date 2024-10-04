@@ -10,22 +10,22 @@ public class Author {
     }
 
     public String getName() {
-        // Метод для получения имени автора
         return name;
     }
 
     public void setName(String name) {
-        // Метод для установки имени автора
         this.name = name;
     }
 
     public int getBirthYear() {
-        // Метод для получения года рождения автора
         return birthYear;
     }
 
     public void setBirthYear(int birthYear) {
-        // Метод для установки года рождения автора
         this.birthYear = birthYear;
+    }
+    @Override
+    public String toString() {
+        return String.format("Автор: %s (%d года рождения)", name, birthYear);
     }
 }
