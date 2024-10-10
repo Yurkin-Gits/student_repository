@@ -1,0 +1,4 @@
+task*/target/
+task*/task*_*/target/
+task*/.vscode/
+.vscode/
