@@ -1,8 +1,0 @@
-task*/target/
-task*/task*_*/target/
-task*_*/target/
-task*/.vscode/
-.vscode/
-task2/task2_a/target/
-task2/task2_b/target/
-task2/task2_c/target/

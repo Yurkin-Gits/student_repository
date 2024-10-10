@@ -1,0 +1,11 @@
+week*/task*/task*_*/target/
+week*/task*/task*_*/.vscode
+
+week*/task*/target/
+week*/task*/.vscode
+
+task*/.vscode/
+task*/target/
+
+.vscode/
+target/
