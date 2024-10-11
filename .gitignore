@@ -12,3 +12,6 @@ task*/target/
 
 .vscode/
 target/
+
+target
+.mvn
