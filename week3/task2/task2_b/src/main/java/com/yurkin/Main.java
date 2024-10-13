@@ -11,7 +11,7 @@ public class Main {
         scanner.close();
         
         HeronMethod heronSqrt = new HeronMethod(number);
-        double result = heronSqrt.HeronSqrt();
+        double result = heronSqrt.heronSqrt();
         
         System.out.printf("Квадратный корень числа %.5f по методу Герона: %.5f\n", number, result);
     }

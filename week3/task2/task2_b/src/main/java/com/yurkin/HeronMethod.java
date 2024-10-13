@@ -2,12 +2,12 @@ package com.yurkin;
 
 public class HeronMethod {
     private double number;
-    private double precision = 0.001;
+    private final double precision = 0.001;
 
     public HeronMethod(double number) {
         this.number = number;
     }
-    public double HeronSqrt() {
+    public double heronSqrt() {
         
         double guess = number / 2.0;
         double previousGuess = 0.0;

@@ -18,10 +18,8 @@ public class Main {
         scanner.close();
 
         MaxCount maxCounter = new MaxCount(numbers);
-        double max = maxCounter.findMax();
-        int count = maxCounter.countMax(max);
+        int count = (int) maxCounter.findAndCountMax();
 
-        System.out.println("Максимальное число: " + max);
         System.out.println("Количество чисел, равных максимальному: " + count);
     }
 }
