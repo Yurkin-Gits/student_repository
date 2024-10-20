@@ -15,7 +15,7 @@ public class Main
         System.out.printf("%.1f%n", value);
     }
 
-    public static double  getValue(int edge)
+    public static double getValue(int edge)
     {
         double V = ((15+7*Math.sqrt(5))/4) * Math.pow(edge, 3);
         return V;

@@ -13,16 +13,14 @@ class StringChecker {
                 System.out.println("Предупреждение: строка короче целевой подстроки, пропускаем её.");
                 continue;
             }
-        }
-
-            for (String str : strings) {
-                for (int i = 0; i <= str.length() - target.length(); i++) {
-                    if (str.substring(i, i + target.length()).equals(target)) {
-                        count++;
-                    }
+            
+            for (int i = 0; i <= str.length() - target.length(); i++) {
+                if (str.substring(i, i + target.length()).equals(target)) {
+                    count++;
                 }
             }
-            
+        }
+
         return count;
     }
 }
