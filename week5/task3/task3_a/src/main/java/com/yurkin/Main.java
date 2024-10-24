@@ -17,23 +17,15 @@ public class Main {
         DataOfSensors[] sensors = new DataOfSensors[readings.length];
 
         for (int i = 0; i < readings.length; i++) {
-            try {
-                String idStr = readings[i].substring(0, 2);
+            try {                                               // ДОБАВЛЕННОЕ ИСКЛЮЧЕНИЕ
+                String idStr = readings[i].substring(0, 2);     // ДЛЯ НЕВЕРНЫХ ФОРМАТОВ ДАННЫХ
                 String tempStr = readings[i].substring(2);
-
-                if (idStr.isEmpty() || idStr.length() != 2) {
-                    throw new IllegalArgumentException("Ошибка: некорректный код датчика.");
-                }
-
                 int id = Integer.parseInt(idStr);
                 int temp = Integer.parseInt(tempStr);
                 sensors[i] = new DataOfSensors(id, temp);
 
-            } catch (NumberFormatException e) {
-                System.out.println("Ошибка: температура должна быть числом.");
-                return;
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                System.out.println("Ошибка: неверный формат входных данных.");
                 return;
             }
         }
@@ -71,7 +63,6 @@ public class Main {
             }
         }
     }
-
     // Сортировка по средней температуре
     public static void sortByTemp(DataOfSensors[] sensors) {
         for (int i = 0; i < sensors.length - 1; i++) {

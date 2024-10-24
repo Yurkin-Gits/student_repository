@@ -19,24 +19,24 @@ public class Main {
         for (int i = 0; i < readings.length; i++) {
             try {
                 String idStr = readings[i].substring(0, 2);
-                String tempStr = readings[i].substring(2);
-
-                if (idStr.isEmpty() || idStr.length() != 2) {
-                    throw new IllegalArgumentException("Ошибка: некорректный код датчика.");
+                String tempStr = readings[i].substring(2); 
+                int id = Integer.parseInt(idStr);
+                int temp = Integer.parseInt(tempStr);        
+        
+                if (temp < -50 || temp > 50) {
+                    throw new IllegalArgumentException("Температура вне допустимого диапазона: " + temp);
                 }
 
-                int id = Integer.parseInt(idStr);
-                int temp = Integer.parseInt(tempStr);
                 sensors[i] = new DataOfSensors(id, temp);
-
             } catch (NumberFormatException e) {
-                System.out.println("Ошибка: температура должна быть числом.");
+                System.out.println("Ошибка: неверный формат числа для ID или температуры.");
                 return;
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
                 return;
-            }
+    }
         }
+        
 
         System.out.println("Сортировать по ID (id) или по средней температуре (temp)?:");
         String sortOption = scanner.nextLine().trim().toLowerCase();
@@ -71,7 +71,6 @@ public class Main {
             }
         }
     }
-
     // Сортировка по средней температуре
     public static void sortByTemp(DataOfSensors[] sensors) {
         for (int i = 0; i < sensors.length - 1; i++) {
