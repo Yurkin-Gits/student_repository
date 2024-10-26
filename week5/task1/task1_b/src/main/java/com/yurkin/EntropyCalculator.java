@@ -2,7 +2,8 @@ package com.yurkin;
 
 public class EntropyCalculator {
 
-    public static double calculateEntropy(char[] characters) {
+    public static double calculateEntropy(String content) {
+        char[] characters = content.toCharArray();
         int[] frequencies = new int[256];
         for (char c : characters) {
             frequencies[c]++;

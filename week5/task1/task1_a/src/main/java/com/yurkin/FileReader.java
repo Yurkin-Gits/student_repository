@@ -8,7 +8,12 @@ import java.nio.file.Paths;
 public class FileReader {
 
     public static void main(String[] args) {
-        String filePath = "src/main/java/com/yurkin/data_file.txt";
+        if (args.length == 0) {
+            System.out.println("Ошибка: Путь к файлу не задан.");
+            return;
+        }
+        
+        String filePath = args[0];
         
         try {
             String content = Files.readString(Paths.get(filePath));
@@ -23,4 +28,3 @@ public class FileReader {
         }
     }
 }
-

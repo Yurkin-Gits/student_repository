@@ -2,30 +2,28 @@ package com.yurkin;
 
 import java.util.Scanner;
 
+import com.yurkin.exceptions.InvalidSortOptionException;
 import com.yurkin.exceptions.SensorIDOutOfRangeException;
 import com.yurkin.exceptions.TemperatureOutOfRangeException;
-
+ 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ввод:");
         String input = scanner.nextLine();
-        if (input.length() > 512) {
-            System.out.println("Ошибка: строка слишком длинная.");
-            return;
-        }
 
         String[] readings = input.split("@");
         DataOfSensors[] sensors = new DataOfSensors[readings.length];
 
         for (int i = 0; i < readings.length; i++) {
+            String idStr = readings[i].substring(0, 2);
+            String tempStr = readings[i].substring(2);
+
             try {
-                String idStr = readings[i].substring(0, 2);
-                String tempStr = readings[i].substring(2); 
                 int id = Integer.parseInt(idStr);
-                int temp = Integer.parseInt(tempStr);        
-        
+                int temp = Integer.parseInt(tempStr);
+
                 if (id < 0 || id > 99) {
                     throw new SensorIDOutOfRangeException("Ошибка: некорректный ID сенсора - " + id);
                 }
@@ -34,12 +32,15 @@ public class Main {
                 }
 
                 sensors[i] = new DataOfSensors(id, temp);
+
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка: некорректные данные.");
+                return;
             } catch (SensorIDOutOfRangeException | TemperatureOutOfRangeException e) {
                 System.out.println(e.getMessage());
                 return;
             }
         }
-        
 
         System.out.println("Сортировать по ID (id) или по средней температуре (temp)?:");
         String sortOption = scanner.nextLine().trim().toLowerCase();
@@ -48,12 +49,16 @@ public class Main {
             sensor.calculateAverageTemp();
         }
 
-        if (sortOption.equals("id")) {
-            sortById(sensors);
-        } else if (sortOption.equals("temp")) {
-            sortByTemp(sensors);
-        } else {
-            System.out.println("Ошибка: неверный выбор сортировки.");
+        try {
+            if (sortOption.equals("id")) {
+                sortById(sensors);
+            } else if (sortOption.equals("temp")) {
+                sortByTemp(sensors);
+            } else {
+                throw new InvalidSortOptionException("Ошибка: неверный выбор сортировки - " + sortOption);
+            }
+        } catch (InvalidSortOptionException e) {
+            System.out.println(e.getMessage());
             return;
         }
 
@@ -74,6 +79,7 @@ public class Main {
             }
         }
     }
+
     // Сортировка по средней температуре
     public static void sortByTemp(DataOfSensors[] sensors) {
         for (int i = 0; i < sensors.length - 1; i++) {

@@ -7,14 +7,17 @@ import java.nio.file.Paths;
 
 public class Main {
     public static void main(String[] args) {
-        String fileName = "src/main/java/com/yurkin/data_file.txt";
-
+        if (args.length == 0) {
+            System.out.println("Ошибка: Путь к файлу не задан.");
+            return;
+        }
+        
+        String filePath = args[0];
+        Path path = Paths.get(filePath);
         try {
-            Path path = Paths.get(fileName);
             String content = Files.readString(path);
-            char[] characters = content.toCharArray();
-            double entropy = EntropyCalculator.calculateEntropy(characters);
-            System.out.printf("Энтропия для файла '%s': %.6f%n", fileName, entropy);
+            double entropy = EntropyCalculator.calculateEntropy(content);
+            System.out.printf("Энтропия для файла '%s': %.6f%n", filePath, entropy);
         } catch (IOException e) {
             System.out.println("Ошибка при чтении файла: " + e.getMessage());
         } catch (Exception e) {
@@ -22,3 +25,4 @@ public class Main {
         }
     }
 }
+ 

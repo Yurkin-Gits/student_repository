@@ -2,6 +2,8 @@ package com.yurkin;
 
 import java.util.Scanner;
 
+import com.yurkin.exceptions.InvalidSortOptionException;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -17,17 +19,12 @@ public class Main {
         DataOfSensors[] sensors = new DataOfSensors[readings.length];
 
         for (int i = 0; i < readings.length; i++) {
-            try {                                               // ДОБАВЛЕННОЕ ИСКЛЮЧЕНИЕ
-                String idStr = readings[i].substring(0, 2);     // ДЛЯ НЕВЕРНЫХ ФОРМАТОВ ДАННЫХ
-                String tempStr = readings[i].substring(2);
-                int id = Integer.parseInt(idStr);
-                int temp = Integer.parseInt(tempStr);
-                sensors[i] = new DataOfSensors(id, temp);
+            String idStr = readings[i].substring(0, 2);
+            String tempStr = readings[i].substring(2);
+            int id = Integer.parseInt(idStr);
+            int temp = Integer.parseInt(tempStr);
+            sensors[i] = new DataOfSensors(id, temp);
 
-            } catch (Exception e) {
-                System.out.println("Ошибка: неверный формат входных данных.");
-                return;
-            }
         }
 
         System.out.println("Сортировать по ID (id) или по средней температуре (temp)?:");
@@ -36,13 +33,16 @@ public class Main {
         for (DataOfSensors sensor : sensors) {
             sensor.calculateAverageTemp();
         }
-
-        if (sortOption.equals("id")) {
-            sortById(sensors);
-        } else if (sortOption.equals("temp")) {
-            sortByTemp(sensors);
-        } else {
-            System.out.println("Ошибка: неверный выбор сортировки.");
+        try {
+            if (sortOption.equals("id")) {
+                sortById(sensors);
+            } else if (sortOption.equals("temp")) {
+                sortByTemp(sensors);
+            } else {
+                throw new InvalidSortOptionException("Ошибка: неверный выбор сортировки - " + sortOption);
+            }
+        } catch (InvalidSortOptionException e) {
+            System.out.println(e.getMessage());
             return;
         }
 

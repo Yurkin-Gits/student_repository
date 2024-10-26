@@ -1,7 +1,6 @@
 package com.yurkin;
 
 import java.io.IOException;
-import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,24 +18,25 @@ public class Main {
         Path inputPath = Paths.get(inputFilePath);
         String resultFileName = "result.txt";
         Path resultFilePath = Paths.get(resultFileName);
-        try (FileChannel fileChannel = FileChannel.open(inputPath, StandardOpenOption.READ)) {
-            int bufferSize = 8192;
-            ByteBuffer buffer = ByteBuffer.allocate(bufferSize);
-            long[] frequencies = new long[256];
-            long totalCharacters = 0;
-            while (fileChannel.read(buffer) > 0) {
-                buffer.flip();
-                while (buffer.hasRemaining()) {
-                    byte b = buffer.get();
-                    frequencies[b & 0xFF]++;
-                    totalCharacters++;
-                }
-                buffer.clear();
-            }
 
-            double entropy = EntropyCalculator.calculateEntropy(frequencies, totalCharacters);
+        if (!Files.exists(inputPath)) {
+            System.out.println("Ошибка: Файл не найден.");
+            return;
+        }
+        if (!Files.isReadable(inputPath)) {
+            System.out.println("Ошибка: Файл недоступен для чтения.");
+            return;
+        }
+
+        try (FileChannel fileChannel = FileChannel.open(inputPath, StandardOpenOption.READ)) {
+            double entropy = EntropyCalculator.calculateEntropy(fileChannel);
             System.out.printf("Энтропия Шеннона для файла '%s': %.6f%n", inputFilePath, entropy);
-            Files.writeString(resultFilePath, "Энтропия Шеннона: " + entropy);
+            if (!Files.exists(resultFilePath) || Files.isWritable(resultFilePath)) {
+                Files.writeString(resultFilePath, "Энтропия Шеннона: " + entropy);
+            } else {
+                System.out.println("Ошибка: Файл недоступен для записи.");
+            }
+            
         } catch (IOException e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
