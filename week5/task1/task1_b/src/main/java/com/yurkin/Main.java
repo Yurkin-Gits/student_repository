@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import main.java.com.yurkin.EntropyCalculator;
+
 public class Main {
     public static void main(String[] args) {
         if (args.length == 0) {
