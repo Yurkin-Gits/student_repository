@@ -9,11 +9,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-public class OrderGenerator {
+public class OrderCompiler {
 
     private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("dd-MM-yy");
 
-    public List<Order> generateOrders(String filePath) {
+    public List<Order> compileOrders(String filePath) {
         List<Order> orders = new ArrayList<>();
         String line;
 

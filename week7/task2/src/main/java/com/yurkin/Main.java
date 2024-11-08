@@ -10,8 +10,8 @@ public class Main {
         }
 
         String filePath = args[0];
-        OrderGenerator generator = new OrderGenerator();
-        List<Order> orders = generator.generateOrders(filePath);
+        OrderCompiler generator = new OrderCompiler();
+        List<Order> orders = generator.compileOrders(filePath);
 
         double totalAmount = orders.stream()
             .filter(order -> order.getOrderDate().getYear() == 2020 &&
