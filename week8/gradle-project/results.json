@@ -1,0 +1,271 @@
+[ {
+  "number" : 1,
+  "recursiveValue" : 1,
+  "recursiveTimeMs" : 0.563401,
+  "optimizedValue" : 1,
+  "optimizedTimeMs" : 0.001754
+}, {
+  "number" : 2,
+  "recursiveValue" : 1,
+  "recursiveTimeMs" : 0.002128,
+  "optimizedValue" : 1,
+  "optimizedTimeMs" : 0.103106
+}, {
+  "number" : 3,
+  "recursiveValue" : 2,
+  "recursiveTimeMs" : 9.64E-4,
+  "optimizedValue" : 2,
+  "optimizedTimeMs" : 0.010201
+}, {
+  "number" : 4,
+  "recursiveValue" : 3,
+  "recursiveTimeMs" : 8.69E-4,
+  "optimizedValue" : 3,
+  "optimizedTimeMs" : 0.004234
+}, {
+  "number" : 5,
+  "recursiveValue" : 5,
+  "recursiveTimeMs" : 0.001198,
+  "optimizedValue" : 5,
+  "optimizedTimeMs" : 0.003316
+}, {
+  "number" : 6,
+  "recursiveValue" : 8,
+  "recursiveTimeMs" : 0.001615,
+  "optimizedValue" : 8,
+  "optimizedTimeMs" : 0.003226
+}, {
+  "number" : 7,
+  "recursiveValue" : 13,
+  "recursiveTimeMs" : 0.002571,
+  "optimizedValue" : 13,
+  "optimizedTimeMs" : 0.003131
+}, {
+  "number" : 8,
+  "recursiveValue" : 21,
+  "recursiveTimeMs" : 0.00551,
+  "optimizedValue" : 21,
+  "optimizedTimeMs" : 0.003349
+}, {
+  "number" : 9,
+  "recursiveValue" : 34,
+  "recursiveTimeMs" : 0.013868,
+  "optimizedValue" : 34,
+  "optimizedTimeMs" : 0.00358
+}, {
+  "number" : 10,
+  "recursiveValue" : 55,
+  "recursiveTimeMs" : 0.008892,
+  "optimizedValue" : 55,
+  "optimizedTimeMs" : 0.003158
+}, {
+  "number" : 11,
+  "recursiveValue" : 89,
+  "recursiveTimeMs" : 0.030331,
+  "optimizedValue" : 89,
+  "optimizedTimeMs" : 0.003507
+}, {
+  "number" : 12,
+  "recursiveValue" : 144,
+  "recursiveTimeMs" : 0.025567,
+  "optimizedValue" : 144,
+  "optimizedTimeMs" : 0.011653
+}, {
+  "number" : 13,
+  "recursiveValue" : 233,
+  "recursiveTimeMs" : 0.041239,
+  "optimizedValue" : 233,
+  "optimizedTimeMs" : 0.00396
+}, {
+  "number" : 14,
+  "recursiveValue" : 377,
+  "recursiveTimeMs" : 0.061399,
+  "optimizedValue" : 377,
+  "optimizedTimeMs" : 0.005826
+}, {
+  "number" : 15,
+  "recursiveValue" : 610,
+  "recursiveTimeMs" : 0.098819,
+  "optimizedValue" : 610,
+  "optimizedTimeMs" : 0.004131
+}, {
+  "number" : 16,
+  "recursiveValue" : 987,
+  "recursiveTimeMs" : 0.170724,
+  "optimizedValue" : 987,
+  "optimizedTimeMs" : 0.003557
+}, {
+  "number" : 17,
+  "recursiveValue" : 1597,
+  "recursiveTimeMs" : 0.069688,
+  "optimizedValue" : 1597,
+  "optimizedTimeMs" : 0.008749
+}, {
+  "number" : 18,
+  "recursiveValue" : 2584,
+  "recursiveTimeMs" : 0.043612,
+  "optimizedValue" : 2584,
+  "optimizedTimeMs" : 0.005807
+}, {
+  "number" : 19,
+  "recursiveValue" : 4181,
+  "recursiveTimeMs" : 0.068788,
+  "optimizedValue" : 4181,
+  "optimizedTimeMs" : 0.003606
+}, {
+  "number" : 20,
+  "recursiveValue" : 6765,
+  "recursiveTimeMs" : 0.111659,
+  "optimizedValue" : 6765,
+  "optimizedTimeMs" : 0.00558
+}, {
+  "number" : 21,
+  "recursiveValue" : 10946,
+  "recursiveTimeMs" : 0.180482,
+  "optimizedValue" : 10946,
+  "optimizedTimeMs" : 0.004198
+}, {
+  "number" : 22,
+  "recursiveValue" : 17711,
+  "recursiveTimeMs" : 0.290619,
+  "optimizedValue" : 17711,
+  "optimizedTimeMs" : 0.003411
+}, {
+  "number" : 23,
+  "recursiveValue" : 28657,
+  "recursiveTimeMs" : 0.508554,
+  "optimizedValue" : 28657,
+  "optimizedTimeMs" : 0.00371
+}, {
+  "number" : 24,
+  "recursiveValue" : 46368,
+  "recursiveTimeMs" : 0.832391,
+  "optimizedValue" : 46368,
+  "optimizedTimeMs" : 0.003813
+}, {
+  "number" : 25,
+  "recursiveValue" : 75025,
+  "recursiveTimeMs" : 1.336856,
+  "optimizedValue" : 75025,
+  "optimizedTimeMs" : 0.00373
+}, {
+  "number" : 26,
+  "recursiveValue" : 121393,
+  "recursiveTimeMs" : 1.539628,
+  "optimizedValue" : 121393,
+  "optimizedTimeMs" : 0.007987
+}, {
+  "number" : 27,
+  "recursiveValue" : 196418,
+  "recursiveTimeMs" : 2.289138,
+  "optimizedValue" : 196418,
+  "optimizedTimeMs" : 0.005261
+}, {
+  "number" : 28,
+  "recursiveValue" : 317811,
+  "recursiveTimeMs" : 3.790888,
+  "optimizedValue" : 317811,
+  "optimizedTimeMs" : 0.003898
+}, {
+  "number" : 29,
+  "recursiveValue" : 514229,
+  "recursiveTimeMs" : 5.54671,
+  "optimizedValue" : 514229,
+  "optimizedTimeMs" : 0.003858
+}, {
+  "number" : 30,
+  "recursiveValue" : 832040,
+  "recursiveTimeMs" : 7.412933,
+  "optimizedValue" : 832040,
+  "optimizedTimeMs" : 0.050499
+}, {
+  "number" : 31,
+  "recursiveValue" : 1346269,
+  "recursiveTimeMs" : 10.484061,
+  "optimizedValue" : 1346269,
+  "optimizedTimeMs" : 0.01304
+}, {
+  "number" : 32,
+  "recursiveValue" : 2178309,
+  "recursiveTimeMs" : 15.849799,
+  "optimizedValue" : 2178309,
+  "optimizedTimeMs" : 0.003726
+}, {
+  "number" : 33,
+  "recursiveValue" : 3524578,
+  "recursiveTimeMs" : 24.287752,
+  "optimizedValue" : 3524578,
+  "optimizedTimeMs" : 0.002623
+}, {
+  "number" : 34,
+  "recursiveValue" : 5702887,
+  "recursiveTimeMs" : 25.894858,
+  "optimizedValue" : 5702887,
+  "optimizedTimeMs" : 0.00384
+}, {
+  "number" : 35,
+  "recursiveValue" : 9227465,
+  "recursiveTimeMs" : 37.384395,
+  "optimizedValue" : 9227465,
+  "optimizedTimeMs" : 0.0024
+}, {
+  "number" : 36,
+  "recursiveValue" : 14930352,
+  "recursiveTimeMs" : 62.270417,
+  "optimizedValue" : 14930352,
+  "optimizedTimeMs" : 0.001708
+}, {
+  "number" : 37,
+  "recursiveValue" : 24157817,
+  "recursiveTimeMs" : 103.427798,
+  "optimizedValue" : 24157817,
+  "optimizedTimeMs" : 0.001609
+}, {
+  "number" : 38,
+  "recursiveValue" : 39088169,
+  "recursiveTimeMs" : 134.875408,
+  "optimizedValue" : 39088169,
+  "optimizedTimeMs" : 0.001117
+}, {
+  "number" : 39,
+  "recursiveValue" : 63245986,
+  "recursiveTimeMs" : 218.365483,
+  "optimizedValue" : 63245986,
+  "optimizedTimeMs" : 0.001216
+}, {
+  "number" : 40,
+  "recursiveValue" : 102334155,
+  "recursiveTimeMs" : 364.454718,
+  "optimizedValue" : 102334155,
+  "optimizedTimeMs" : 0.002132
+}, {
+  "number" : 41,
+  "recursiveValue" : 165580141,
+  "recursiveTimeMs" : 573.241177,
+  "optimizedValue" : 165580141,
+  "optimizedTimeMs" : 0.001569
+}, {
+  "number" : 42,
+  "recursiveValue" : 267914296,
+  "recursiveTimeMs" : 1007.203997,
+  "optimizedValue" : 267914296,
+  "optimizedTimeMs" : 0.006033
+}, {
+  "number" : 43,
+  "recursiveValue" : 433494437,
+  "recursiveTimeMs" : 1569.467431,
+  "optimizedValue" : 433494437,
+  "optimizedTimeMs" : 0.006747
+}, {
+  "number" : 44,
+  "recursiveValue" : 701408733,
+  "recursiveTimeMs" : 2455.165198,
+  "optimizedValue" : 701408733,
+  "optimizedTimeMs" : 0.011619
+}, {
+  "number" : 45,
+  "recursiveValue" : 1134903170,
+  "recursiveTimeMs" : 4036.308743,
+  "optimizedValue" : 1134903170,
+  "optimizedTimeMs" : 0.021361
+} ]
