@@ -1,6 +1,7 @@
 package com.yurkin;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class FibonacciTest {
@@ -26,5 +27,15 @@ public class FibonacciTest {
         assertEquals("Fibonacci(10) должен быть равен 55", 55, Fibonacci.optimized(10));
         assertEquals("Fibonacci(20) должен быть равен 6765", 6765, Fibonacci.optimized(20));
     }
+
+    @Test
+    public void testRecursivePerformance() {
+        long startTime = System.nanoTime();
+        Fibonacci.recursive(40);
+        long endTime = System.nanoTime();
+        double executionTime = (endTime - startTime) / 1_000_000.0;
+        assertTrue("Рекурсивный метод работает слишком долго", executionTime < 500);
+}
+
 }
 
